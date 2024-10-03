@@ -1,0 +1,164 @@
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+body{
+    background: var(--Light-Gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh; /* center contianer for desktop design */
+}
+
+.container{
+    max-width: 635px;
+    box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "main main"
+    "suscription us"
+    ;
+}
+
+.container-main{
+    grid-area: main;
+    background: white;
+    padding: 40px;
+    border-radius: 5px 5px 0 0 ;
+}
+
+h1{
+    color: var(--Cyan);
+    font-size: 24px;
+}
+
+.text-warranty-main{
+    color: var(--Bright-Yellow);
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.text-main{
+    color: #9aa7be;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 11px;
+}
+
+.container-subscription{
+    grid-area: suscription;
+    background: #2ab3b1e6;
+    padding: 40px;
+    color: white;
+    border-radius: 0 0 0 5px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+.price-subscription {
+    color: rgba(255, 255, 255, 0.5); 
+    margin-top: 18px;
+    margin-bottom: 4px;
+}
+
+.price-subscription span {
+    font-size: 32px;
+    color: rgba(255, 255, 255, 1); 
+}
+
+.text-subscription{
+    margin-bottom: 26px;
+}
+
+button{
+    color: white;
+    background: var(--Bright-Yellow);
+    border: none;
+    max-width: 237px;
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+.container-us{
+    grid-area: us;
+    background: #2ab3b1a6;
+    color: white;
+    padding: 40px;
+    border-radius: 0 0 5px 0;
+}
+
+.container-us h2{
+    margin-bottom: 18px;
+}
+
+.container-us p{
+    opacity: 0.75;
+    margin-top:1px;
+}
+
+@media (width < 400px) {
+    body{
+        height: auto;
+        padding: 72px 32px 72px 32px;
+    }
+
+    .container{    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "main"
+        "suscription"
+        "us"
+        ;}
+
+    .container-main{
+        padding: 24px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .text-warranty-main{
+        font-size: 15px;
+    }
+
+    .text-main{
+        font-size: 14px;
+    } 
+
+    .container-subscription{
+        padding: 24px;
+        border-radius: 0;
+    }
+
+    button{
+        max-width: 263px;
+    }
+
+    .container-us{
+        padding: 24px;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+
+
+
